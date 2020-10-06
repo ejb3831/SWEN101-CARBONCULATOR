@@ -1,4 +1,4 @@
-import switch as switch
+
 
 
 def householdmembers() -> int:
@@ -16,10 +16,6 @@ def householdmembers() -> int:
     5. 5
     6. more than 5?\n""")
 
-
-    #change this to a switch statement
-    #this adds points to the carbon footprint
-
     #this does not account for wrong input
     return 16 - int(householdmembers)*2
 
@@ -35,10 +31,6 @@ def housesize() -> int:
     2. Medium ( less than 1500 sqft )
     3. Small ( less than 500 sqft )
     4. Apartment ( less than 150 sqft )\n""")
-
-
-    #change this to a switch statement
-    #this adds points to the carbon footprint
 
     #this does not account for wrong input
     return 13 - int(housesize)*3
@@ -57,8 +49,6 @@ def meatchoices() -> int:
     4. Vegan\n""")
 
 
-    #this adds points to the carbon footprint
-
     #this does not account for wrong input
     return 12 - int(meatchoices)*2
 
@@ -68,7 +58,6 @@ def waterconsumption() -> int:
     Then gives you points accordingly.
     :return: int
     """
-
 
     dishwasher = input("""How often do you use the dishwasher per week? Choose a number! 
     1. None
@@ -82,11 +71,149 @@ def waterconsumption() -> int:
     3. 4 to 9 times
     4. more 4 to 9 times\n""")
 
-
-    #this adds points to the carbon footprint
-
     #this does not account for wrong input
     return int (int(dishwasher)+int(washingmachine)) -2
+
+def householdpurchases() -> int:
+    """
+    Asks about your household purchases. Then gives you points accordingly.
+    :return: int
+    """
+
+    #asks about your household purchases choices
+    householdpurchases = input("""How many household purchases do you make per year? Choose a number! 
+    1. more than 7
+    2. 5 and 7 items
+    3. 3 and 5 items
+    4. less than 3 items
+    5. almost nothing or only secondhand items\n""")
+
+    #this does not account for wrong input
+    return 12 - int(householdpurchases)*2
+
+def waste() -> int:
+    """
+    Asks about your waste. Then gives you points accordingly.
+    :return: int
+    """
+
+    #asks about your household purchases choices
+    waste = input("""How much waste do you produce per week in terms of trashcan? Choose a number! 
+    1. 0.5 
+    2. 1
+    3. 2
+    4. 3
+    5. 4\n""")
+
+    #this does not account for wrong input
+    if(int(waste)==1):
+        return 5
+    return int(waste)*10
+
+def recycle() -> int:
+    """
+    Asks about your recycling choices. Then gives you points accordingly.
+    :return: int
+    """
+
+    #asks about your recycling choices
+    recycle = input("""Do you recycle? Choose a number! 
+    1. Yes
+    2. No\n""")
+
+    if(int(recycle) == 1):
+        choices = input("""How many of the following do you recycle? Enter a number! 
+        Glass
+        Plastic
+        Paper
+        Aluminum
+        Steel
+        Food waste\n""")
+    else:
+        return 24
+
+    #this does not account for wrong input
+    return 24 - int(choices)*4
+
+def personaltransportation() -> int:
+    """
+    Asks about your personal transportation choices. Then gives you points accordingly.
+    :return: int
+    """
+
+    #asks about your recycling choices
+    personaltransportation = input("""Do you use a personal transportation vehicle? Choose a number! 
+    1. Yes
+    2. No\n""")
+
+    if(int(personaltransportation) == 1):
+        choices = input("""How many miles per year? Choose a number! 
+        1. more than 15,000 miles
+        2. 10,000 to 15,000 miles
+        3. 1,000 to 10,000 miles
+        4. less than 1,000\n""")
+    else:
+        return 0
+
+    #this does not account for wrong input
+    return 14 - int(choices)*2
+
+def publictransportation() -> int:
+    """
+    Asks about your public transportation choices. Then gives you points accordingly.
+    :return: int
+    """
+
+    #asks about your recycling choices
+    publictransportation = input("""Do you use public transportation? Choose a number! 
+    1. Yes
+    2. No\n""")
+
+    if(int(publictransportation) == 1):
+        choices = input("""How many miles per year? Choose a number! 
+        1. more than 20,000 miles
+        2. 15,000 to 20,000 miles
+        3. 10,000 to 15,000 miles
+        4. 1,000 to 10,000 miles
+        5. less than 1,000\n""")
+    else:
+        return 0
+
+    if(int(choices)==3):
+        return 6
+    if(int(choices)==4):
+        return 4
+    if(int(choices)==5):
+        return 2
+
+    #this does not account for wrong input
+    return 14 - int(choices)*2
+
+def flights() -> int:
+    """
+    Asks about your flight transportation choices. Then gives you points accordingly.
+    :return: int
+    """
+
+    #asks about your flight choices
+    flights = input("""Do you fly? Choose a number! 
+    1. Yes
+    2. No\n""")
+
+    if(int(flights) == 1):
+        choices = input("""How far have you flown in 1 year? Choose a number! 
+        1. short distances (within your state)
+        2. medium distances (nearby state or country)
+        3. far distances (another continent)\n""")
+    else:
+        return 0
+
+    if(int(choices)==1):
+        return 2
+    if(int(choices)==2):
+        return 6
+    if(int(choices)==3):
+        return 20
 
 def main() -> None:
     """
@@ -99,7 +226,13 @@ def main() -> None:
     #points += householdmembers()
     #points += housesize()
     #points += meatchoices()
-    points += waterconsumption()
+    #points += waterconsumption()
+    #points += householdpurchases()
+    #points +=waste()
+    #points += recycle()
+    #points +=personaltransportation()
+    #points += publictransportation()
+    points += flights()
     print(points)
 if __name__ == '__main__':
     main()
