@@ -215,24 +215,28 @@ def flights() -> int:
     if(int(choices)==3):
         return 20
 
+def quiz() -> None:
+    #these calculations were taken from https://www.wikihow.com/Calculate-Your-Carbon-Footprint for now
+
+    points = 0;
+    points += householdmembers()
+    points += housesize()
+    points += meatchoices()
+    points += waterconsumption()
+    points += householdpurchases()
+    points +=waste()
+    points += recycle()
+    points +=personaltransportation()
+    points += publictransportation()
+    points += flights()
+
 def main() -> None:
     """
     The main function.
     :return: None
     """
-    #these calculations were taken from https://www.wikihow.com/Calculate-Your-Carbon-Footprint for now
 
-    points = 0;
-    #points += householdmembers()
-    #points += housesize()
-    #points += meatchoices()
-    #points += waterconsumption()
-    #points += householdpurchases()
-    #points +=waste()
-    #points += recycle()
-    #points +=personaltransportation()
-    #points += publictransportation()
-    points += flights()
-    print(points)
+    quiz()
+
 if __name__ == '__main__':
     main()
