@@ -230,6 +230,46 @@ def quiz() -> None:
     points += publictransportation()
     points += flights()
 
+    print("You have %s points!" % points)
+    if points<=60:
+        print("This means you're making a small impact on the world but you can always do more to help."
+              "Below are some ways to reduce your impact!")
+    else:
+        print("This means you're making a pretty big impact on the world. "
+              "Below are some ways to reduce your impact!")
+
+    print("""Ways to change your carbon footprint:
+        ~ Making Home Improvements
+            - Replace things in your home with more efficient alternatives 
+                + Ex. Light Bulbs
+            - Weatherproof your home
+            - Be mindful of the energy you are using
+            - Use clean energy
+            
+        - Modify your eating habits
+            - Buy local
+            - Garden !
+            - Eat less meat
+            - Buy less products in packaging
+            
+        - Travel Green
+            - Find greener ways to travel 
+                + Skateboarding, Biking, Scootering
+            - Get your car serviced regularly
+            - Find alternatives to flying 
+        
+        - Reusing and Recycling
+            - Recycle !
+            - Reuse your old items or renovate them to be better
+            - Compost
+        
+        - Reduce water use
+            - Take shorter showers
+            - Only run washing machine/dishwasher when full
+            - Fix leaks
+            - Take water consumption into consideration when landscaping
+            """)
+
 def main() -> None:
     """
     The main function.
