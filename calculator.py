@@ -62,6 +62,32 @@ def meatchoices() -> int:
     #this does not account for wrong input
     return 12 - int(meatchoices)*2
 
+def waterconsumption() -> int:
+    """
+    Asks about your water consumption choices using a dishwasher and washing machine.
+    Then gives you points accordingly.
+    :return: int
+    """
+
+
+    dishwasher = input("""How often do you use the dishwasher per week? Choose a number! 
+    1. None
+    2. 1 to 3 times
+    3. 4 to 9 times
+    4. more 4 to 9 times\n""")
+
+    washingmachine = input("""How often do you use the washingmachine per week? Choose a number! 
+    1. None
+    2. 1 to 3 times
+    3. 4 to 9 times
+    4. more 4 to 9 times\n""")
+
+
+    #this adds points to the carbon footprint
+
+    #this does not account for wrong input
+    return int (int(dishwasher)+int(washingmachine)) -2
+
 def main() -> None:
     """
     The main function.
@@ -70,9 +96,10 @@ def main() -> None:
     #these calculations were taken from https://www.wikihow.com/Calculate-Your-Carbon-Footprint for now
 
     points = 0;
-    points += householdmembers()
-    points += housesize()
-    points += meatchoices()
+    #points += householdmembers()
+    #points += housesize()
+    #points += meatchoices()
+    points += waterconsumption()
     print(points)
 if __name__ == '__main__':
     main()
