@@ -1,6 +1,14 @@
 $(document).ready(function() {
+    /****************************************
+    
+    Javascript for main home page
+    Colby Scarbrough
+    
+    ****************************************/
     
     
+    
+    console.log("jquery and script file")
     /* For the sticky navigation */
     $('.js--section-features').waypoint(function(direction) {
         if (direction == "down") {
