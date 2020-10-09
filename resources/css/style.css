@@ -669,3 +669,40 @@ footer p {
 .main-nav-quiz {
     display: inline-block;
 }
+
+.quiz-label {
+    color:#1f621c;
+    text-align: center;
+}
+
+
+
+.question-form ul{
+    margin: 20px;
+}
+
+
+
+.question-title {
+    text-align: center;
+}
+
+.question-form ul {
+    list-style: none;
+}
+
+.question-form input {
+    margin-right: 0px;
+}
+
+.radio-input {
+    margin-right: 0px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.question-form ul {
+    margin-left: 10% 20px;
+}

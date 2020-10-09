@@ -68,6 +68,11 @@
     
     .main-nav li {
         display: block;
+        list-style-type: none;
+        margin-right: 0;
+    }
+    .main-nav-quiz li {
+        display: block;
     }
     
     .main-nav li a:link,
