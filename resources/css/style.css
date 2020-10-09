@@ -706,3 +706,7 @@ input[type="radio"] {
 .question-form ul {
     margin-left: 10% 20px;
 }
+
+#submit-btn {
+    margin: 10px 43%;
+}
