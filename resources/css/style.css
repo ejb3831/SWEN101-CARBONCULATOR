@@ -710,3 +710,17 @@ input[type="radio"] {
 #submit-btn {
     margin: 10px 43%;
 }
+
+#results {
+    display: none;
+}
+
+.test-form {
+    display: block;
+}
+
+.results-label {
+    text-align: center;
+    color:#1f621c;
+
+}
