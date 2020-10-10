@@ -724,3 +724,9 @@ input[type="radio"] {
     color:#1f621c;
 
 }
+
+.pie {
+    width: 50vh; height: 50vh;
+    border-radius: 50%;
+    background: #1f621c;
+}
