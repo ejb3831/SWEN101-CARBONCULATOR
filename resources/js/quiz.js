@@ -12,7 +12,7 @@ var doc, submit, answers, questions;
 doc = document
 submit = doc.getElementById("submit-btn")
 answers = [];
-questions = 8;
+questions = 9;
 
 console.log("script file");
 console.log(doc.location);
