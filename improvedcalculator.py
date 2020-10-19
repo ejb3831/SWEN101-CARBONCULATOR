@@ -1,7 +1,7 @@
 import sys
 
 
-def quiz(answers: list) -> None:
+def quiz(answers: list) -> int:
     #these calculations were taken from https://www.wikihow.com/Calculate-Your-Carbon-Footprint for now
 
     points = 0;
@@ -57,6 +57,7 @@ def quiz(answers: list) -> None:
         elif(int(answers[10])==3):
             points += 20
 
+    return points
 
 def main() -> None:
     """
@@ -66,7 +67,7 @@ def main() -> None:
     answers = list()
     sys.args[0] = answers
 
-    quiz(answers)
+    quizpoints = quiz(answers)
 
 if __name__ == '__main__':
     main()
