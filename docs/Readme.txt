@@ -1,1 +1,1 @@
-legit just here cuz the folder disapeered
+legit just here cuz the folder disapeared
